@@ -1,1 +1,1 @@
-# -Dollar-Cost-Average-Calculator
+# Quick Dollar-Cost Average Calculator
