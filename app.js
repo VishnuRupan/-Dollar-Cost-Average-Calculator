@@ -22,6 +22,10 @@ const inputArray = [currentPrice, currentShare, targetPrice, targetShare];
 
 /////   Functions
 
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 const quickCalc = (e) => {
   e.preventDefault();
   let curShare = Number(currentShare.value);
@@ -48,14 +52,14 @@ const quickCalc = (e) => {
   if (adjustedPriceRounded === null || isNaN(adjustedPriceRounded)) {
     console.log("");
   } else {
-    final1.textContent = `Average Stock Price: $${adjustedPriceRounded}`;
+    final1.textContent = `Average Stock Price: $${numberWithCommas(
+      adjustedPriceRounded
+    )}`;
     final2.textContent = `Total Number of Shares: ${totalShare}`;
-    final3.textContent = `Total Cost: $${totalPrice.toFixed(2)}`;
+    final3.textContent = `Total Cost: $${numberWithCommas(
+      totalPrice.toFixed(2)
+    )}`;
     window.localStorage.setItem("lastPriceInputs", JSON.stringify(lastInputs));
-    window.localStorage.setItem(
-      "adjustedPriceRounded",
-      JSON.stringify(adjustedPriceRounded)
-    );
   }
 };
 
