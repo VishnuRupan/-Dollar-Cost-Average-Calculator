@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Stock Price Checker</title>
+  </head>
+  <body>
+    <h1>Dollar Cost Average Calculator</h1>
+    <div class="quick-calc-div">
+      <div class="form-container">
+        <form action="">
+          <div class="current-share-div">
+            <label for="current-share">Current Shares:</label>
+            <input
+              type="number"
+              id="current-share"
+              required
+              placeholder="2000"
+            />
+          </div>
+
+          <div class="current-price-div">
+            <label for="current-price"> Current Price:</label>
+            <input
+              type="number"
+              id="current-price"
+              required
+              placeholder="2.5"
+            />
+          </div>
+
+          <br />
+
+          <div class="target-share-div">
+            <label for="target-share">Target Shares:</label>
+            <input type="number" id="target-share" required />
+          </div>
+
+          <div class="target-price-div">
+            <label for="target-price"> Target Price:</label>
+            <input type="number" id="target-price" required />
+          </div>
+
+          <button type="submit" id="quick-calculate-btn">Calculate</button>
+
+          <div class="final-result">
+            <h3 id="final-result">Average Stock Price: $0</h3>
+            <h3 id="final-result-2">Total Number of Shares: 0</h3>
+            <h3 id="final-result-3">Total Cost: $0</h3>
+          </div>
+        </form>
+      </div>
+
+      <div class="btn-container">
+        <button id="load-btn">Load</button>
+        <button id="clear-input-btn">Clear Inputs</button>
+        <button id="clear-btn">Clear Saved Data</button>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
